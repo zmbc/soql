@@ -1,3 +1,10 @@
+## Resubmission
+
+This is a resubmission. In this version I have:
+
+* Added a URL to the Socrata Open Data API website in my Description field.
+* Put single quotes around 'Socrata Open Data API' and 'SoQL' to indicate that these are external services, and not normal English words.
+
 ## Test environment
 
 * Tested and built on Windows 7, R 3.2.3.
