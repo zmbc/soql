@@ -43,21 +43,23 @@ Returns a new \code{soql} object, with parameters added, for use in other functi
 \code{\link{soql_simple_filter}} for an easier method of doing \code{where} with equality.
 }
 \examples{
-# Without pipes
-soql_chain <- soql()
-soql_chain <- soql_select(soql_chain, "height,weight")
-soql_chain <- soql_where(soql_chain, "height > 30")
-soql_chain <- soql_order(soql_chain, "height", desc=TRUE)
-soql_chain <- soql_group(soql_chain, "type")
-soql_chain <- soql_q(soql_chain, "a")
-my_url <- as.character(soql_chain)
-
-# With pipes
-my_url <- soql() \%>\%
-  soql_select("height,weight") \%>\%
-  soql_where("height > 30") \%>\%
-  soql_order("height", desc=TRUE) \%>\%
-  soql_group("type") \%>\%
-  soql_q("a") \%>\%
-  as.character()
+if (require(magrittr)) \{
+  # With pipes
+  my_url <- soql() \%>\%
+    soql_select("height,weight") \%>\%
+    soql_where("height > 30") \%>\%
+    soql_order("height", desc=TRUE) \%>\%
+    soql_group("type") \%>\%
+    soql_q("a") \%>\%
+    as.character()
+\} else \{
+  # Without pipes
+  soql_chain <- soql()
+  soql_chain <- soql_select(soql_chain, "height,weight")
+  soql_chain <- soql_where(soql_chain, "height > 30")
+  soql_chain <- soql_order(soql_chain, "height", desc=TRUE)
+  soql_chain <- soql_group(soql_chain, "type")
+  soql_chain <- soql_q(soql_chain, "a")
+  my_url <- as.character(soql_chain)
+\}
 }

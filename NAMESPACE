@@ -1,5 +1,4 @@
-import('magrittr')
-importFrom("utils", "URLdecode", "URLencode")
+importFrom(utils, URLdecode, URLencode)
 exportPattern("^[^\\.]")
 S3method(print, soql)
 S3method(as.character, soql)

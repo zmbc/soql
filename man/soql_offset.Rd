@@ -28,13 +28,15 @@ Returns a new \code{soql} object, with an offset parameter added, for use in oth
 \code{\link{soql_limit}}
 }
 \examples{
-# Without pipes
-soql_chain <- soql()
-soql_chain <- soql_offset(soql_chain, 50)
-my_url <- as.character(soql_chain)
-
-# With pipes
-my_url <- soql() \%>\%
-  soql_offset(50) \%>\%
-  as.character()
+if (require(magrittr)) \{
+  # With pipes
+  my_url <- soql() \%>\%
+    soql_offset(50) \%>\%
+    as.character()
+\} else \{
+  # Without pipes
+  soql_chain <- soql()
+  soql_chain <- soql_offset(soql_chain, 50)
+  my_url <- as.character(soql_chain)
+\}
 }

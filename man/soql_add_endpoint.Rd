@@ -27,13 +27,17 @@ Returns a new \code{soql} object, with the endpoint added, for use in other func
 \code{\link{soql}}
 }
 \examples{
-# Without pipes
-soql_chain <- soql()
-soql_chain <- soql_add_endpoint(soql_chain, "https://fake.soda.api/resource.json")
-my_url <- as.character(soql_chain)
-
-# With pipes
-my_url <- soql() \%>\%
-  soql_add_endpoint("https://fake.soda.api/resource.json") \%>\%
-  as.character()
+if (require(magrittr)) \{
+  # With pipes
+  my_url <- soql() \%>\%
+    soql_add_endpoint("https://fake.soda.api/resource.json") \%>\%
+    as.character()
+\} else \{
+  # Without pipes
+  soql_chain <- soql()
+  soql_chain <- soql_add_endpoint(soql_chain, "https://fake.soda.api/resource.json")
+  my_url <- as.character(soql_chain)
+\}
 }
+
+
