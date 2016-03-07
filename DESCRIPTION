@@ -1,0 +1,10 @@
+Package: soql
+Type: Package
+Title: Helps Make Socrata Data API Calls
+Version: 0.1
+Date: 2016-03-06
+Depends: magrittr
+Author: Zeb Burke-Conte
+Maintainer: "Zeb Burke-Conte"" <zmbc@uw.edu>
+Description: Used to construct the URLs and parameters of Socrata Data API (SODA) calls, using method-chained and sensical syntax. Plays well with pipes.
+License: MIT
