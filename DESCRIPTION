@@ -7,4 +7,4 @@ Depends: magrittr
 Author: Zeb Burke-Conte
 Maintainer: "Zeb Burke-Conte"" <zmbc@uw.edu>
 Description: Used to construct the URLs and parameters of Socrata Data API (SODA) calls, using method-chained and sensical syntax. Plays well with pipes.
-License: MIT
+License: MIT + file LICENSE

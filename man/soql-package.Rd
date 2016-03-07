@@ -1,6 +1,5 @@
 \name{soql-package}
 \alias{soql-package}
-\alias{soql}
 \docType{package}
 \title{
 \packageTitle{soql}
@@ -9,10 +8,6 @@
 \packageDescription{soql}
 }
 \details{
-
-The DESCRIPTION file:
-\packageDESCRIPTION{soql}
-\packageIndices{soql}
 To create a SoQL URL, or just parameters for one, start with \code{soql()}. Then chain the result into other functions, such as \code{soql_where()} or \code{soql_order()}. When you're done, use \code{as.character()} to retrieve the finished URL, for use with any networking package.
 }
 \author{
