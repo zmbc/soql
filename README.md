@@ -4,6 +4,9 @@
 
 R package that helps construct queries for the [Socrata Open Data API](https://dev.socrata.com) (SODA), using the Socrata Query Language (SoQL) format. Documentation for SoQL in general, apart from this package, can be found [here](https://dev.socrata.com/docs/queries/).
 
+## Install
+`install.packages("soql")`
+
 ## Purpose
 
 `soql` is **not** a package for parsing JSON/CSV/XML retrieved from SODA. It only exists to make constructing SODA request URLs easy. Once the URL is created, it can be used by anything: `read.socrata` from the [RSocrata](https://github.com/Chicago/RSocrata) package, `fromJSON` from [jsonlite](https://github.com/jeroenooms/jsonlite), or `getURL` from [RCurl](https://github.com/omegahat/RCurl) if you're really a minimalist. It's up to you.
