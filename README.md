@@ -1,5 +1,7 @@
 # soql
 
+[![Downloads](http://cranlogs.r-pkg.org/badges/soql)](http://cran.rstudio.com/web/packages/soql/index.html)
+[![CRAN Version](http://www.r-pkg.org/badges/version/soql)](http://cran.rstudio.com/web/packages/soql)
 [![Travis-CI Build Status](https://travis-ci.org/zmbc/soql.svg?branch=master)](https://travis-ci.org/zmbc/soql)
 
 R package that helps construct queries for the [Socrata Open Data API](https://dev.socrata.com) (SODA), using the Socrata Query Language (SoQL) format. Documentation for SoQL in general, apart from this package, can be found [here](https://dev.socrata.com/docs/queries/).
