@@ -62,7 +62,6 @@ as.character.soql <- function(x, ...) {
     
     params <- paste0(
       params,
-      '$',
       URLencode(param_key),
       '=',
       URLencode(param_value)
@@ -135,8 +134,7 @@ soql_group <- function(soql_list, group_clause) {
     return(NULL)
   }
   
-  # Only one group clause allowed
-  soql_list$clauses$group <- group_clause
+  soql_list$clauses$group <- .concat_clause(soql_list$clauses$group, group_clause)
   
   return(soql_list)
 }
