@@ -1,5 +1,6 @@
 ^\.travis\.yml$
 ^README\.md$
 ^LICENSE\.md$
+^CHANGELOG\.md$
 ^cran-comments\.md$
 \.git
